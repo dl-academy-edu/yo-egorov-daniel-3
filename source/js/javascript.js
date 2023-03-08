@@ -8,14 +8,19 @@
 // Если нет класса, добавляет, если есть, удаляет: searchElem.classList.toggle();
 // Сообщает, есть ли класс у элемента: searchElem.classList.contains();
 
-const popup = document.querySelector('.section-form'); // Первый poup
+const popup = document.querySelector('.form'); // Первый poup
 const buttonOpen = document.querySelector('.button-btn-js');// Первый poup
 const buttonClose = document.querySelector('.button__close');// Первый poup
 const popUp = document.querySelector('.poup'); // Второй poup
 const btnOpen = document.querySelector('.button-btn__js');// Второй poup
 const btnClose = document.querySelector('.button__close-js');// Второй poup
-const btnSroll = document.querySelector('.btn__scroll-js') // Кнопка скролла
-
+const sendUp = document.querySelector('.send'); // Третий poup
+const sendOpen = document.querySelector('.footer__message-js');// Третий poup
+const sendClose = document.querySelector('.send__block-forms-js');// Третий poup
+const btnScroll = document.querySelector('.btn__scroll-js') // Кнопка скролла
+// Гамбургер!!!
+const menuBtn = document.querySelector('.menu__btn');
+const menu = document.querySelector('.menu');
 
 // Первый poup
 buttonOpen.addEventListener('click', function() {
@@ -32,6 +37,7 @@ window.addEventListener('keydown', function(event) {
         popup.classList.remove('open');
     }
 })
+
 // Второй poup
 btnOpen.addEventListener('click', function() {
     popUp.classList.add('open');
@@ -47,38 +53,58 @@ window.addEventListener('keydown', function(event) {
     }
 })
 
+
+// Третий poup
+sendOpen.addEventListener('click', function() {
+    sendUp.classList.add('open');
+    emailInput.focus()
+})
+sendClose.addEventListener('click', function() {
+    sendUp.classList.remove('open');
+})
+
+window.addEventListener('keydown', function(event) {
+    if (event.code === "Escape" && popUp.classList.contains('open')) {
+        popUp.classList.remove('open');
+    }
+})
+
+
 // Кнопка скролла
 window.addEventListener('scroll', (e) => {
     const scrollTop = window.scrollY;
-    console.log(srollTop);
+    console.log('scrollTop');
 
     if(scrollTop >= 1500) {
         visuallyBtn();
     } else {
-        notVisualyBtn();
+        notVisuallyBtn();
     }
     btnScroll.addEventListener('click', scrollUp);
-    // window.addEventListener('keydown', scrollUp);
 })
 
 // Отображение кнопки 
 function visuallyBtn() {
-    btnScroll.classList.remove('open');
+    btnScroll.classList.remove('btn__scroll-hidden');
 }
 
 // Скрывающая кнопку
 function notVisuallyBtn() {
-    btnSroll.classList.add('open');
+    btnScroll.classList.add('btn__scroll-hidden');
 }
 
 // Сам скролл
 function scrollUp() {
     console.log('scrollUp');
-    closeModal()
-    window.scrollTop ({
+    window.scrollTo ({
         top: 0,
         behavior: 'smooth',
     })
 }
 
+// ГАМБУРГЕР
 
+menuBtn.addEventListener('click', function() {
+    menuBtn.classList.toggle('active');
+    menu.classList.toggle('active');
+})

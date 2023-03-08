@@ -19,6 +19,11 @@
 @import "_blocks/signin";
 @import "_blocks/register";
 @import "_blocks/btnscroll";
+@import "_blocks/send";
+@import "_blocks/mobile";
+@import "_blocks/sliderone";
+@import "_blocks/swiper";
+@import "_blocks/myprofile";
 @import "_blocks/footer";
 @import "_blocks/header";
 
@@ -42,11 +47,18 @@
 .main {
   &__group {
     display: flex;
+    margin-top: 10px;
+    gap: 40px;
+    @media (max-width:586px) {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+}
   }
   &__title {
     font-family: $font-gilroy;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 47px;
     line-height: 57px;
     color: #070707;
@@ -61,6 +73,11 @@
     color: #070707;
     max-width: 226px;
     margin-top: 93px;
+    @media (max-width:586px) {
+      margin-top: 0;
+      margin-bottom: 33px;
+      max-width: 205px;
+}
   }
   &__slider {
     display: flex;
@@ -94,8 +111,16 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-left: 50px;
-    padding-bottom: 62px;
+    // margin-left: 50px;
+    // padding-bottom: 62px;
+    margin-top: -19px;
+    margin-left: 48px;
+    padding-bottom: 45px;
+    @media (max-width:586px) {
+      align-items: center;
+      justify-content: center;
+      margin-left: 5px;
+}
   }
   &__list-item {
     font-family: $font-gilroy;
@@ -104,43 +129,99 @@
     font-size: 18px;
     line-height: 21px;
     color: #070707;
-    max-width: 448px;
+    max-width: 478px;
     display: block;
     text-align: initial;
-    // border: 2.5px solid #070707;
     margin-top: 20px;
-    // padding: 15px;  
+    padding: 12px;  
+    border:2.5px solid #070707;
   }
   &__list-i {
-    border:2.5px solid #070707;
-    height:135px;
-    max-width:900px;
-    padding:15px;
-    padding-top: 5px;
     margin-bottom: 35px;
     position:relative;
   }
+  &__list-i:nth-child(1) {
+    // margin-top: -20px;
+    margin-left: -149px;
+    @media (max-width:586px) {
+      margin-left: 0px;
+}
+  }
+  &__list-i:nth-child(2) {
+    margin-left: 54px;
+    margin-top: -15px;
+    @media (max-width:586px) {
+      margin-left: 0px;
+}
+  }
+  &__list-i:nth-child(3) {
+    margin-right: 149px;
+        @media (max-width:799px) {
+          margin-right: 130px;
+          @media (max-width:586px) {
+            margin-right: 0px;
+      }
+   }
+  }
   &__list-i::before {
-    border:25px solid #f6f6f6 transparent;
+    border:27px solid #f6f6f6 transparent;
     border-top-color: 30px #070707;
     position:absolute;
     top:100%;
-    right:25px;
+    right:5%;
     content:'';
   }
   &__list-i::after {
-    border:25px solid #f6f6f6 transparent;
+    border:27px solid #f6f6f6 transparent;
     border-top-color:#f6f6f6;
     position:absolute;
-    top:100%;
-    right:25px;
+    top:97.5%;
+    right:5%;
     content:'';
   }
+  &__list-i:nth-child(2)::before {
+    right:84%;
+    @media (max-width:687px) {
+      right:83%;
+}
+    @media (max-width:478px) {
+      right:81%;
+}
+    @media (max-width:385px) {
+      right:79%;
+}
+    @media (max-width:385px) {
+     right:77%;
+}
+    @media (max-width:385px) {
+      right:75%;
+}
+  }
+  &__list-i:nth-child(2)::after {
+    right:84%;
+    @media (max-width:687px) {
+      right:83%;
+}
+    @media (max-width:478px) {
+      right:81%;
+}
+    @media (max-width:385px) {
+      right:79%;
+}
+    @media (max-width:385px) {
+      right:77%;
+}
+    @media (max-width:385px) {
+      right:75%;
+}
+  }
+
 }
 
 // скилы
 
 .skills {
+  margin-top: 30px;
   &__title {
     font-family: $font-gilroy;
     font-style: normal;
@@ -170,6 +251,14 @@
     align-items: center;
     justify-content: space-around;
     text-align: center;
+    @media (max-width: 1015px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 40px;
+    }
+    @media (max-width: 327px) {
+      gap: 30px;
+    }
   }
   &__list-img {
     margin-bottom: 20px;
@@ -182,6 +271,7 @@
     line-height: 17px;
     text-align: center;
     color: #828282;
+    margin-bottom: 21px;
   }
   &__flex-list {
     display: flex;
@@ -199,6 +289,9 @@
 }
 progress {
   -webkit-appearance: none; 
+  @media (max-width: 459px) {
+    max-width: 94px;
+  }
 }
 progress::-webkit-progress-bar {
   background-color: #E5E5E5;
@@ -216,6 +309,7 @@ progress::-webkit-progress-value {
 .portfolio {
   &__background {
     background: #F6F6F6;
+    height: 816px;
   }
   &__title {
     font-family: $font-gilroy;
@@ -227,6 +321,7 @@ progress::-webkit-progress-value {
     color: #070707;
     margin-top: 60px;
     margin-bottom: 50px;
+    padding-top: 64px;
   }
 }
 
