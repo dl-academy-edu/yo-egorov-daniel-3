@@ -12,15 +12,17 @@ $font-mono-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "
 */
 $font-base-family: $font-serif-family;
 
-$font-gilroy: "Gilroy";
-
 /*
 * Breakpoints
 */
 
-
+$media-tablet: 768px;
+$media-tablet-landscape: 1024px;
+$media-desktop: 1200px;
 
 /*
 * Colors
 */
 
+$color-bg: #fff;
+$color-text: #151515;
