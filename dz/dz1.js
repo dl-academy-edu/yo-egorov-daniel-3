@@ -1,5 +1,5 @@
-let myName = 'Polina';
-let maAge = 30;
+let myName = 'Danil';
+let maAge = 13;
 let isJavaScriptDeveloper = true;
 let country = 'Russia';
 
@@ -16,7 +16,7 @@ function getAmount(){
 }
 getAmount();
 
-const yearOfBirth = 1992;
+const yearOfBirth = 2009;
 console.log (Number(yearOfBirth));
 
 var a1 = true && true;
