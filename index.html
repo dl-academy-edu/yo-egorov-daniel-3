@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>DL Academy</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <script>
+      var docElement = document.documentElement;
+      docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+    </script>
+    <link href="css/style.min.css" rel="stylesheet">
+
+  </head>
+  
+<body class="body">
+  <div class="wrapper"><header class="header">
+    <div class="container header-container"><nav class="header-nav">
+    <ul class="header-list">
+    <li class="header-list__item item-home"><a class="header-list__link link-focus" href="./index.html">Home</a></li>
+    <li class="header-list__item"><a class="header-list__link" href="././my-blog.html">My blog</a></li>
+    <li class="header-list__item"><a class="header-list__link btn-open-sign-js" href="#">Sign In</a></li>
+    <li class="header-list__item"><a class="header-list__link btn-open-register-js" href="#">Register</a></li>
+    <li class="header-list__item"><a class="header-list__link j-to-profile hidden" href="#">My profile</a></li>
+    </ul>
+    </nav></div>
+    <div class="burger-wrapper burger-not-visible">
+    <div class="burger">@@include('blocks/button-cross.html', { "class": "burger__close-btn btn-close", "class-js": "btn-close-burger-js", })<nav class="burger__nav">
+    <ul class="burger-list">
+    <li class="burger-list__item item-home"><a class="burger-list__link link-home" href="./index.html">Home</a></li>
+    <li class="burger-list__item"><a class="burger-list__link" href="./my-blog.html">My blog</a></li>
+    <li class="burger-list__item"><a class="burger-list__link btn-open-sign-js" href="#">Sign In</a></li>
+    <li class="burger-list__item"><a class="burger-list__link btn-open-register-js" href="#">Register</a></li>
+    </ul>
+    </nav></div>
+    </div>
+    </header>
+    <section class="section section-slider">
+    <div class="container container-slider">
+    <div class="content">@@include('blocks/title-h1.html', { "text": "Daniil Egorov", "class": "content__title", })
+    <div class="content__inner">
+    <p class="content__bio"> 13 years old, Tolyatti</p>
+    </div>
+    </div>
+    <div id="main-slider" class="slider">
+    <div class="slider-wrapper">
+    <ul class="slider-inner-wrapper">
+    <li id="slide-1" class="slide"><picture class="slide__picture"> <img class="slide__img slide__img-one" src="./img/image/PHOTO_12.jpg" alt="woman" width="1000" height="1497" /> </picture></li>    
+    <li class="slide" id="slide-2"><picture class="slide__picture"><img class="slide__img slide__img-two" src="./img/image/PHOTO_2.jpg" width="1000" height="1497" alt="woman"></picture></li>
+    </ul>
+    </div>
+    <div class="slider-nav"><button class="slider-nav__previous" disabled="disabled" type="button"> </button>
+    <div class="slider-pagination slider-pagination-js"></div>
+    <button class="slider-nav__next" disabled="disabled" type="button"> </button></div>
+    </div>
+    </div>
+    </section>
+    <section class="section section-about">
+    <div class="container container-about">
+    <div class="content"> @@include('blocks/title-h2.html', { "text": "About me", "class": "content__title", })
+    <div class="content__text">
+    <p class="content__text-one">Я обучаюсь в DL Academy и вот чему я научился.</p>
+    </div>
+    </div>
+    </div>
+    </section>
+    <section class="section section-skills">
+    <div class="container container-skills">
+    <div class="block-content">@@include('blocks/title-h2.html', { "text": "Skills", "class": "block-content__title", })
+    <p class="block-content__description">I work in such programs as</p>
+    <ul class="progressbar">@@include('blocks/progress-item.html', { "image-src": "./img/icon/html5-icon.png", "image-width": "79", "image-height": "90", "image-alt": "html5-logo", "title__name": "HTML 5", "precent": "85%", "label-for": "html", "id-progress": "html", "value": "85", }) @@include('blocks/progress-item.html', { "image-src": "./img/icon/css-icon.png", "image-width": "79", "image-height": "90", "image-alt": "css-logo", "title__name": "CSS/SCSS", "precent": "55%", "label-for": "css", "id-progress": "css", "value": "55", }) @@include('blocks/progress-item.html', { "image-src": "./img/icon/js-icon.png", "image-width": "68", "image-height": "90", "image-alt": "javascript-logo", "title__name": "JavaScript", "precent": "5%", "label-for": "js", "id-progress": "js", "value": "5", }) @@include('blocks/progress-item.html', { "image-src": "./img/icon/git-icon.png", "image-width": "90", "image-height": "90", "image-alt": "Git-logo", "title__name": "Git/GitHub", "precent": "15%", "label-for": "git", "id-progress": "git", "value": "15", }) @@include('blocks/progress-item.html', { "image-src": "./img/icon/figma-icon.png", "image-width": "60", "image-height": "90", "image-alt": "figma-logo", "title__name": "Figma", "precent": "80%", "label-for": "figma", "id-progress": "figma", "value": "80", }) </ul>
+    </div>
+    </div>
+    </section>
+    <section class="section section-portfolio">
+    <div class="container container-portfolio">
+    <div class="block-portfolio">@@include('blocks/title-h2.html', { "text": "Portfolio", "class": "block-portfolio__title", })
+    <div class="slider-wrap">@@include('blocks/slider-swiper.html')</div>
+    </div>
+    </div>
+    </section>
+    @@include('blocks/footer.html') @@include('blocks/preloader.html') @@include('blocks/modal-sign-in.html') @@include('blocks/modal-register.html') @@include('blocks/modal-send-message.html') @@include('blocks/btn-scroll-behavior.html')</div>
